@@ -1,0 +1,31 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-8bits"
+  [fullScreen]="true"
+  ><p style="color: white">Loading...</p></ngx-spinner
+>
+<div class="container">
+  <div>
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ user?.avatar }}" alt="" />
+      </div>
+      <div class="user-card-info">
+        <h3>{{ user?.first_name }} {{ user?.last_name }}</h3>
+        <div class="card-id">
+          <h3 >Id: {{user?.id }} </h3>
+         
+        </div>
+        <div class="card-email">
+          <a href="http://{{ user?.email }}">{{ user?.email }}</a>
+        </div>
+       
+      </div>
+    </div>
+    <div class="back">
+      <button routerLink="/user">Go Back</button>
+    </div>
+  </div>
+</div>

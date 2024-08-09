@@ -1,0 +1,41 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-8bits"
+  [fullScreen]="true"
+  ><p style="color: white">Loading...</p></ngx-spinner
+>
+<header class="header">
+  <div class="input-div">
+    <input
+      type="text"
+      placeholder="Search about user by user id"
+      #input
+      name="userId"
+      [(ngModel)]="inputValue"
+    />
+  </div>
+</header>
+<div class="container">
+  <ng-container *ngFor="let user of userList">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ user.avatar }}" alt="" />
+      </div>
+      <div class="user-card-name">
+        <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+      </div>
+   
+      <div class="card-button" [routerLink]="['/userdetails', user.id]">
+        <button class="user-details">User Details</button>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<div class="pagination" *ngIf="isVisable">
+  <div class="pagination-div">
+    <button class="prev-but" (click)="prevPage()">Previous</button>
+    <button class="next-but" (click)="nextPage()">Next</button>
+  </div>
+</div>

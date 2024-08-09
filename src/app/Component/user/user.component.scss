@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .input-div {
+    max-width: 1420px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px 0;
+  }
+  .header{
+  background: #706e7a;
+  
+  }
+  .header .input-div{
+    padding-bottom: 15px;
+  }
+ .header .input-div input {
+    padding: 10px;
+    width: 400px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: #eae8f0;
+    color: #ffffff;
+  }
+  .container {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .container .card {
+    background-color: #e5e5ee;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .container .card .card-image {
+    max-width: 300px;
+  }
+  .container .card .card-image img {
+    width: 100%;
+  }
+  .container .card .user-card-name {
+    color: #1d1818;
+  }
+  // .container .card .card-email a {
+  //   transition: all 0.5s ease-in-out;
+  //   text-decoration: none;
+  //   color: #797993;
+  // }
+  .container .card .card-email a:hover {
+    color: #ffffff;
+  }
+  .container .card .card-button button {
+    transition: all 0.5s ease-in-out;
+    padding: 11px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #706e7a;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .container .card .card-button button:hover {
+    color: #302e3b;
+    background-color: #ffffff;
+  }
+  .pagination {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .pagination .pagination-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  .pagination .pagination-div .prev-but,
+  .pagination .pagination-div .next-but {
+    transition: all 0.5s ease-in-out;
+    padding: 10px 20px;
+    background-color: #302e3b;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .pagination .pagination-div .prev-but:hover,
+  .pagination .pagination-div .next-but:hover {
+    background-color: #ffffff;
+    color: #302e3b;
+  }
+ 
+  @media (max-width: 798px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 565px) {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+    }}
